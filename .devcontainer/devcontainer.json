@@ -1,0 +1,19 @@
+{
+    "name": "OS lab 2",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "workspaceFolder": "/workspace",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools",
+                "ms-vscode.makefile-tools"
+            ]
+        }
+    },
+    "remoteUser": "vscode",
+    "postCreateCommand": "gcc --version && cmake --version"
+}
